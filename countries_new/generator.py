@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 from descartes import PolygonPatch
 
 
-sf = shapefile.Reader(
-    "C:/Users/agata/AppData/Local/Programs/Python/Python36-32/games/mapgenerator/countries_new/simpleCountries")
+sf = shapefile.Reader( < shp file path > )
 records = sf.records()
 shapes = sf.shapes()
 print(shapes)

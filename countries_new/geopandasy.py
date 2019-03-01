@@ -32,8 +32,6 @@ def get_bbox(name, condition):
 
 # to są wszystkie łąncuchy gorskie z pliku
 features = gp.GeoDataFrame.from_file(path)
-# print(type(features))
-# features.plot()
 # wyswietla porządany element jako wykres matplotliba
 for index, row in features.iterrows():
     Qkod = row[1]
@@ -47,9 +45,6 @@ for index, row in features.iterrows():
                      lon_0=(bouning_box[0] + abs((bouning_box[2]-bouning_box[0])/2)),
                      lat_0=(bouning_box[1] + abs((bouning_box[3]-bouning_box[1])/2)))
 
-        # mm = Basemap(llcrnrlon=(bouning_box[0]-5), llcrnrlat=(bouning_box[1]-5),
-        #              urcrnrlon=(bouning_box[2]+5), urcrnrlat=(bouning_box[3]+5),
-        #              resolution='i', projection='tmerc', lat_0=bouning_box[1], lon_0=bouning_box[2])
         water = 'lightskyblue'
         earth = 'cornsilk'
         countries = mm.drawcountries()
